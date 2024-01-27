@@ -5,7 +5,7 @@
 5) Largest no. of three ternary operator. (done)
 6) (4th and 5th for two num) (done)
 7) Check leap year (done)
-8) whether a num is tve or Negative. (done)
+8) whether a num is positive or Negative. (done)
 9) Sum of Natural numbers upto n. (done)
 10) Factorial of a num. (done)
 11) Fibonacci Series (done)
