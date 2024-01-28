@@ -1,12 +1,12 @@
 1) Sum of Natural Numbers using recursion >>>
-2) Reverse of Sentence Eg: "Srimathi is a good girl" to "girl good a is Srimathi"
+2) Reverse of Sentence Eg: "Srimathi is a good girl" to "girl good a is Srimathi" >>>
 3) Calculate Avg of array >>>
 4) Largesest ele of array >>>
-5) Add Two Matrix using Multi-dimension array.
+5) Add Two Matrix using Multi-dimension array. >>>
 6) Count no. of vowels and Consonants in a sentance >>>
 7) occurance of particular char in String Eg: aabbcda(a)=?  >>>
-8) Sort the Given Integer Array
-9) Print words of even length
+8) Sort the Given Integer Array >>>
+9) Print words of even length  >>>
 10) Str 1 = "Hello Sri"
     Str 2 =  "Everyon. This is"
     Out:  Str3="Hello (St 2)" to String
