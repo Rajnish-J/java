@@ -9,8 +9,8 @@
 9) Print words of even length  >>>
 10) Str 1 = "Hello Sri"
     Str 2 =  "Everyon. This is"
-    Out:  Str3="Hello (St 2)" to String
-11) Check Anagram  
+    Out:  Str3="Hello (St 2)" to String >>>
+11) Check Anagram  >>>
 12) Convert String to String array. >>>
 
 Basic programs using inbuilt functions:
