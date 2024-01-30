@@ -1,3 +1,11 @@
+// Chef and easy problem
+// Read problems statements in Mandarin Chinese and Russian.
+// Chef and Roma are playing a game. Rules of the game are quite simple. Initially there are N piles of stones on the table. 
+// In each turn, a player can choose one pile and remove it from the table. 
+// Each player want to maximize the total number of stones removed by him. Chef takes the first turn.
+
+// Please tell Chef the maximum number of stones he can remove assuming that both players play optimally.
+
 import java.util.*;
 
 class stone{
