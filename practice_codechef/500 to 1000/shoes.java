@@ -13,19 +13,23 @@
 
 import java.util.*;
 
-class shoes{
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        while(t-->0){
-            int friends = sc.nextInt();
-            int shoes = sc.nextInt();
-            
-            if(shoes > friends){
-                
-            }
-
-            System.out.println((friends * 2) - shoes);
-        }
-    }
+class shoes
+{
+	public static void main (String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		while(t-->0)
+		{
+		    int friends = sc.nextInt();
+		    int shoes = sc.nextInt();
+		    if(shoes >= friends){
+		        System.out.println(friends);    
+		    }
+		    else{
+		        System.out.println((friends - shoes)+ friends);    
+		    }
+		    
+		}
+	}
 }
