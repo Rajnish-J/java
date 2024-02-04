@@ -11,7 +11,12 @@ class mario{
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         while (t-->0){
-            
+            int speed_bullet = sc.nextInt();
+            int distance = sc.nextInt();
+            int time = sc.nextInt();
+
+            int calc = distance / speed_bullet;
+            System.out.println((time > calc) ? time - calc : 0);
         }
     }
 }

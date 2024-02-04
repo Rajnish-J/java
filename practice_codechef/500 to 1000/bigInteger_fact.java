@@ -4,7 +4,7 @@
 import java.util.*;
 import java.math.*;
 
-class Codechef
+class Fact
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
