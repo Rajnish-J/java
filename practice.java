@@ -1,12 +1,17 @@
-class appform{
+class poly{
+    public static void min(){
+        System.out.println("This function can find minimum number");
+    }
+    public static void min(int a){
+        System.out.println(a);
+    }
+}
+
+class call{
     public static void main(String[] args) {
-        appform rajnish = new appform();
-        rajnish.display("Rajnish", 334);
+        poly obj = new poly();
+        obj.min();
+        obj.min(5);
         
     }
-    public void display(String name, int rollno){
-        System.out.println(name);
-        System.out.println(rollno);
-    }
-
 }
