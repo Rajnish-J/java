@@ -12,6 +12,9 @@ class armstrong{
             original_number /= 10;
             num_of_digits++;
             }
+
+        original_number = num;
+
         while(original_number > 0 ){
             remainder = original_number % 10;
             result += Math.pow(remainder,num_of_digits);
