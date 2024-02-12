@@ -11,13 +11,11 @@ class armstrong{
         while(original_number > 0 ){
             original_number /= 10;
             num_of_digits++;
-        }
-
-        while (original_number > 0) {
             remainder = original_number % 10;
             result += Math.pow(remainder,num_of_digits);
             original_number /= 10;
-        }
+        }
+            
 
         System.out.println((result == num)? "Armstrong Number" : "Not a Armstrong Number");
 
