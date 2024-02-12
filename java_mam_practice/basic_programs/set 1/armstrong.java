@@ -11,9 +11,7 @@ class armstrong{
         while(original_number > 0 ){
             original_number /= 10;
             num_of_digits++;
-        }
-
-        original_number = num;
+        }
 
         while (original_number > 0) {
             remainder = original_number % 10;
