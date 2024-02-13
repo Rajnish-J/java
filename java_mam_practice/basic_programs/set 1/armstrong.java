@@ -21,12 +21,6 @@ class armstrong{
             original_number /= 10;
             
             }
-      
-            
-        }
-            
-
         System.out.println((result == num)? "Armstrong Number" : "Not a Armstrong Number");
-
     }
 }
