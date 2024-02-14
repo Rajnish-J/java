@@ -30,7 +30,7 @@ class BankAccount {
     }
 }
 
-class CodeChef {
+class Bank {
     public static void main(String[] args) {   
         BankAccount b1 = new BankAccount("John");
         BankAccount b2 = new BankAccount(1000);

@@ -33,7 +33,7 @@ class Animal {
     }
  }
  
- class Codechef {
+ class seen {
     public static void main(String[] args) {
         
        // Both animal1 and animal2 are of type Animal,
