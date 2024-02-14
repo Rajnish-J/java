@@ -15,7 +15,7 @@ class Car {
     }
 }
 
-class Codechef {
+class me {
     public static void main(String[] args) {
         Car myCar = new Car(); // Create object
         myCar.make = "Toyota";

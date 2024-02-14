@@ -7,7 +7,7 @@ class Rectangle
     int height;
 }
 
-class Codechef
+class create
 {
     public static void main(String[] args) {
 

@@ -16,7 +16,7 @@ class StringHelper {
     }
 }
 
-class CodeChef {
+class my {
     public static void main(String[] args) {
         
         StringHelper myHelper = new StringHelper();
