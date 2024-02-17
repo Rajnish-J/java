@@ -15,20 +15,5 @@ class gcd {
             }
         }
         System.out.println("The GCD of the numbers are " + gcd);
-
-
-        // another method reduces loop iterates:
-
-        for(int i = small; i>=1; i--){
-            if((num_1%i == 0)&&(num_2%i == 0)){
-                gcd = i;
-                break;
-            }
-        }
-        System.out.println("The GCD of the numbers are " + gcd);
-
-        // another method : Euclidean method
-        
-
     }
 }

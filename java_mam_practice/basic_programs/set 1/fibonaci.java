@@ -1,8 +1,9 @@
 import java.util.*;
-class fibonaci {
+
+class fibo{
     public static void main(String[] args) {
-        
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of fibonacci series: ");
         int num = sc.nextInt();
         int next_term = 0;
         int first_term = 0;
