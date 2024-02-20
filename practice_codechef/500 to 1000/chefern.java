@@ -7,24 +7,39 @@ Each even indexed episode was A minutes long and each odd indexed episode was B 
 Calculate the total duration (in minutes) of the last season.
  */
 
+/* package codechef; // don't place package name! */
+
 import java.util.*;
 
-class Eren{
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
-        while(t-->0){
-            int n = sc.nextInt();
-            int a = sc.nextInt();
-            int b = sc.nextInt();
-            int season = n/2;
+/* package codechef; // don't place package name! */
 
-            if(n%2==0){
-                System.out.println((season*a) + (season * b));
-            }
-            else{
-                System.out.println((season/2)*a + ((season/2) + 1)*b);
-            }
-        }
-    }
+import java.util.*;
+class Eren
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		int T=sc.nextInt();
+		while(T-->0){
+		    int N=sc.nextInt();
+		    int A=sc.nextInt();
+		    int B=sc.nextInt();
+		    int even=0;
+		    int odd=0;
+		    if (N>1){
+		        if (N%2==0){
+		            System.out.println(((N/2)*A)+((N/2)*B));
+		        }
+		        else{
+		            System.out.println((((N/2)+1)*B)+((N/2)*A));
+		        }
+		        
+		    }
+		    else{
+		        System.out.println(B);
+		    }
+		    
+		}
+		
+	}
 }
