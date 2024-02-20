@@ -1,4 +1,4 @@
-class calc {
+class calc_1{
     public static void main(String[] args) {
         int a = 2345;
         int b = a + 8;

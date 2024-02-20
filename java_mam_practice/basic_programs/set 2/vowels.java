@@ -1,21 +1,21 @@
-import java.util.*;
-
 class vowels{
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String str = sc.nextLine();
-        int vowles = 0; 
+        String name = "Code with Rajnish";
+        int vowels = 0;
         int consonants = 0;
-        
-        for(int i = 0; i<str.length(); i++){
-            char c = str.charAt(i);
-            if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U'){
-                vowles++;
+
+        for(int i = 0; i<name.length();i++){
+            char c = name.charAt(i);
+            if(c == 'a' || c == 'e' || c == 'i' || c == 'o'
+            || c == 'u' || c == 'A' || c == 'E' || c == 'I'
+            || c == 'O' || c == 'U'){
+                vowels++;
             }
             else{
                 consonants++;
             }
         }
-        System.out.println("Total words in the name is " + str.length() + ", " + "vowles are: " + vowles + ", consonants are: " + consonants);
+        System.out.println("The given " + name + " contain "
+        + vowels + " vowels " + consonants + " consonants.");
     }
 }
