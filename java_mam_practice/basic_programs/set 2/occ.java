@@ -1,14 +1,14 @@
 import java.util.*;
 
-class occurance{
+class occ{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the string: ");
         String str = sc.nextLine();
         int count = 0;
 
         char[] ch = str.toCharArray();
-        int size = ch.length;
-        for(int i = 0; i<size; i++){
+        for(int i = 0; i<ch.length;i++){
             if(ch[i] == 'a'){
                 count++;
             }
