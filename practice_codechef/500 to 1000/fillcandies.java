@@ -5,7 +5,7 @@
 
 import java.util.*;
 
-class candies{
+class candiees{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
