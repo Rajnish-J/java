@@ -1,20 +1,14 @@
-import java.util.*;
-
-class large{
+class lar_ele{
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int size = sc.nextInt();
-        int[] num = new int[size];
+        int[] array = {1,54,87,45};
         int max = 0;
-    
-        for(int i = 0; i<size; i++){
-            num[i] = sc.nextInt();
-        }
-        for(int i = 0; i<size; i++){
-            if(max < num[i]){
-                max = num[i];
+
+        // checking loop
+        for(int i = 0; i<array.length; i++){
+            if(max<array[i]){
+                max = array[i];
             }
-            System.out.println(max);
         }
+        System.out.println("The largest element in the array: " + max);
     }
 }
