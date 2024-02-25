@@ -1,19 +1,17 @@
 import java.util.*;
 
-class evenword {
+class even_length{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
-
-        evenlengths(input);
+        even_lengths(input);
     }
-    public static void evenlengths(String sentence){
+    public static void even_lengths(String sentence){
         String[] word = sentence.split(" ");
-
-        for(String words : word){
+        for(String words: word){
             if(words.length() % 2 == 0){
                 System.out.println(words);
             }
         }
-    }    
+    }
 }
