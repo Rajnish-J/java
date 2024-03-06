@@ -7,7 +7,7 @@ One day, N passengers would like to travel to the same destination. What is the 
 
 import java.util.*;
 
-class Codechef
+class lines
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{

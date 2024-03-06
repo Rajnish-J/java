@@ -13,7 +13,7 @@ find the maximum number of gold medals (first place) that Chef can win.
 
 import java.util.*;
 
-class Codechef
+class race
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
