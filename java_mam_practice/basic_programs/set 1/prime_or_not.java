@@ -11,7 +11,7 @@ class prime_or_not{
         if(num == 2){
             System.out.println("Prime number");
         }
-        else if(num % 2 == 0){
+        else if(num % 2 == 0 || num == 1){
             System.out.println("Not a prime number");
         }
         else{
@@ -24,6 +24,9 @@ class prime_or_not{
             if(flag == 0){
                 System.out.println("Prime number");
             }
+            else{
+                System.out.println("Not a prime number");
+            }
         }
     }
-}`
+}
