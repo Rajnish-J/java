@@ -12,7 +12,7 @@
 
 import java.util.*;
 
-class Codechef
+class Jailer
 {
 	public static void main (String[] args)
 	{
