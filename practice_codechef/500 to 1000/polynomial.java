@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Codechef
+class Polynomial
 {
 	public static void main (String[] args)
 	{
