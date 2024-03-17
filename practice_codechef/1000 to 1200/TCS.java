@@ -28,7 +28,7 @@ class TCS{
 
             for(int i = 0; i<3;i++){
                 Dragon_mark[i] = sc.nextInt();
-                Dragon_avg += Dragon_mark[i]; 
+                Dragon_avg += Dragon_mark[i];
             }
             for(int i = 0; i<3;i++){
                 Dragon_mark[i] = sc.nextInt();
