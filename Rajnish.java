@@ -1,10 +1,6 @@
-I update my all projects.
-all the problem statements in this repository.
-i done 500+ problems in codechef!!
-
-12 - ppt, full project / 80% / final report(edit) / 
-
-int n=5;
+class Rajnish_pattern{
+    public static void main(String[] args) {
+        int n=5;
         for(int i=0;i<5;i++){
             //R
             for(int j=0;j<5;j++){
@@ -91,3 +87,5 @@ int n=5;
 
             System.out.println();
         }
+    }
+}
