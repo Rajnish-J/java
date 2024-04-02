@@ -1,3 +1,4 @@
+package names;
 class Rajnish_blink {
     public static void main(String[] args) throws InterruptedException {
         int n = 5;

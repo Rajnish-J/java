@@ -9,6 +9,5 @@ public class sum_of_array {
             sum += array[i];
         }
         System.out.println(sum);
-    }
-    
+    }    
 }
