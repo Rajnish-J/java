@@ -1,5 +1,3 @@
-package problems.basic_prob;
-
 import java.util.*;
 
 class prime{
