@@ -8,7 +8,8 @@ class factorial_find{
         if(num < 0){
             num = - num;  
         }
-        System.out.println("The factorial of given number " + num + ", is: " + factorial(num));
+        int res = factorial(num);
+        System.out.println("The factorial of given number " + num + ", is: " + res);
     }
 
     public static int factorial(int in){
