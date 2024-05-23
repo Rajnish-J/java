@@ -1,4 +1,5 @@
-package qspiders.day_2.code;
+package practice.day_2.code;
+
 class res_2{
     public static void main(String[] args) {
         double a = 3.14, b = a;

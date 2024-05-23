@@ -1,4 +1,5 @@
-package qspiders.day_2.code;
+package practice.day_2.code;
+
 class res_1{
     public static void main(String[] args) {
         int a=10,b=10,c=-30;

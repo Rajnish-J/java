@@ -1,8 +1,15 @@
+import java.util.Scanner;
+
 class largest{
     public static void main(String[] args) {
-        int[] array = {11,25,45,78,4};
+        Scanner sc = new Scanner(System.in);
+        int size = sc.nextInt();
+        int[] array = new int[size];
         int largest = 0;
-        int size = array.length;
+        
+        for(int i = 0; i<size; i++){
+            array[i] = sc.nextInt();
+        }
 
         //chcking loop
         for(int i = 0; i<size; i++){
@@ -10,6 +17,6 @@ class largest{
                 largest = array[i];
             }
         }
-        System.out.println("The largest element in the array: " + largest);
+        System.out.println(largest);
     }
 }
