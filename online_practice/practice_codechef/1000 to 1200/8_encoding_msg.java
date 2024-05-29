@@ -24,8 +24,8 @@ class encoding_messages
 		// your code goes here
 		Scanner sc = new Scanner(System.in);
 		int t = sc.nextInt();
-		for(int i=0;i<t;i++){
-		    int n = sc.nextInt();
+		while(t-->0){
+			int n = sc.nextInt();
 		    String s = sc.next();
 		    char[] arr = s.toCharArray();
 		    for(int j=0;j<n-1;j+=2){
@@ -41,6 +41,7 @@ class encoding_messages
             
 		    String str = new String(arr);
 		    System.out.println(str);
+		
 		}
 	}
 }
