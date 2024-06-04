@@ -20,7 +20,15 @@ class chef_two_strs {
     public static void main(String[] args) {
         int t = sc.nextInt();
         while(t-->0){
-            
+            String s1 = sc.next(), s2 = sc.next();
+            int min = 0, max = 0;
+
+            for(int i = 0; i < s1.length(); i++){
+                char a = s1.charAt(i), b = s2.charAt(i);
+                if((a != b) || ((a == '?') && (b == '?'))){max ++;}
+                if((a != b) && ((a != '?') && (b != '?'))){min ++;}
+            }
+            System.out.println(min + " " + max);
         }
     }    
 }
