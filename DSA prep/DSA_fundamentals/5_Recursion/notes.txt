@@ -1,0 +1,17 @@
+Recursion: 
+    Function calling itself
+    usage: solve a problem, find the solution for a sub problem and use that to solve your actual program.
+
+    Example: 1 + 2 + 3 + 4 (sum of N elements)
+
+    sum(4) = 1 + 2 + 3 + 4
+           = sum(3) + 4
+           sum(N) = sum(N-1) + N
+
+workflow / creation / idealogy:
+    1) assumption: 
+        Decide what your function should do, assume it does
+    2) main logic: 
+        solving problems with subproblems
+    3) base case: 
+        when code stops
