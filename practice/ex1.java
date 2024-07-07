@@ -1,3 +1,5 @@
+// 08.17
+// 08.41
 class ex1{
     static{
         System.out.println("MLSI");
