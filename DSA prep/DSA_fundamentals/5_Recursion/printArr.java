@@ -11,7 +11,7 @@ class printArr{
         if(i == arr.length){
             return;
         }
-        System.out.print(arr[i] + " ");
+        System.out.println(arr[i] + " ");
         printAr(arr, i+1);
     }
 }
