@@ -1,0 +1,25 @@
+package Level_0;
+
+import java.util.*;
+
+public class alpha_numeric {
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		System.out.print("Enter the alpha numeric input: ");
+		String ip = sc.next();
+		
+		System.out.println((int)'0');
+		System.out.println((int)'9');
+		
+		int check = 0;
+		for(int i = 0; i<ip.length(); i++) {
+			if(ip.charAt(i) >= 48 && ip.charAt(i) <= 67) {
+				
+			System.out.println(ip.charAt(i));
+			}
+		}
+		
+	}
+}
+// a1b2c3d1

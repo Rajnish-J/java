@@ -20,3 +20,13 @@ class swap_Numbers {
         System.out.println("After swapping: a = " + a + ", b = " + b);
     }
 }
+
+/*
+a = 10
+b = 20
+
+
+a = 30
+b = 10
+a = 20 
+ */

@@ -1,0 +1,27 @@
+package collections_pra;
+
+import java.util.ArrayList;
+
+public class student_arraylist {
+
+	static ArrayList<student> student = new ArrayList<student>();
+
+	public static void main(String[] args) {
+		student.add(new student(334, "Rajnish", 22));
+		student.add(new student(330, "raghul", 21));
+
+//		System.out.println(student);
+		ArrayList<String> res_sep_name = sep_name(student);
+		System.out.println(res_sep_name);
+
+	}
+
+	public static ArrayList<String> sep_name(ArrayList<student> stud) {
+		ArrayList<String> sep_name = new ArrayList<String>();
+		for (student obj : student) {
+			String name = obj.getName();
+			sep_name.add(name);
+		}
+		return sep_name;
+	}
+}

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class largest{
+class largest_no{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();

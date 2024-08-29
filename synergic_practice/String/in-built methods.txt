@@ -1,0 +1,522 @@
+Java's `String` class provides a variety of inbuilt methods to perform operations on strings. Here's an explanation of these methods, along with examples and possible test cases for each.
+
+### 1. **`length()`**
+   - **Description**: Returns the number of characters in the string.
+   - **Syntax**: `int length()`
+   - **Example**:
+     ```java
+     String s = "Hello";
+     int len = s.length(); // 5
+     ```
+   - **Test Cases**:
+     - Empty string: `""` → `0`
+     - String with spaces: `"Hello World"` → `11`
+     - String with special characters: `"!@#$%"` → `5`
+
+### 2. **`charAt(int index)`**
+   - **Description**: Returns the character at the specified index.
+   - **Syntax**: `char charAt(int index)`
+   - **Example**:
+     ```java
+     String s = "Hello";
+     char c = s.charAt(1); // 'e'
+     ```
+   - **Test Cases**:
+     - Index within range: `"Hello".charAt(0)` → `'H'`
+     - Index out of range: `"Hello".charAt(5)` → `StringIndexOutOfBoundsException`
+
+### 3. **`substring(int beginIndex)`**
+   - **Description**: Returns a new string that is a substring starting from `beginIndex` to the end of the string.
+   - **Syntax**: `String substring(int beginIndex)`
+   - **Example**:
+     ```java
+     String s = "Hello";
+     String sub = s.substring(2); // "llo"
+     ```
+   - **Test Cases**:
+     - Valid index: `"Hello".substring(2)` → `"llo"`
+     - Index equals string length: `"Hello".substring(5)` → `""`
+     - Index out of range: `"Hello".substring(6)` → `StringIndexOutOfBoundsException`
+
+### 4. **`substring(int beginIndex, int endIndex)`**
+   - **Description**: Returns a new string that is a substring starting from `beginIndex` to `endIndex - 1`.
+   - **Syntax**: `String substring(int beginIndex, int endIndex)`
+   - **Example**:
+     ```java
+     String s = "Hello";
+     String sub = s.substring(1, 4); // "ell"
+     ```
+   - **Test Cases**:
+     - Valid indices: `"Hello".substring(1, 4)` → `"ell"`
+     - End index equals string length: `"Hello".substring(1, 5)` → `"ello"`
+     - End index less than begin index: `"Hello".substring(4, 1)` → `StringIndexOutOfBoundsException`
+     - Begin or end index out of range: `"Hello".substring(1, 6)` → `StringIndexOutOfBoundsException`
+
+### 5. **`concat(String str)`**
+   - **Description**: Concatenates the specified string to the end of the current string.
+   - **Syntax**: `String concat(String str)`
+   - **Example**:
+     ```java
+     String s1 = "Hello";
+     String s2 = "World";
+     String result = s1.concat(s2); // "HelloWorld"
+     ```
+   - **Test Cases**:
+     - Non-empty strings: `"Hello".concat("World")` → `"HelloWorld"`
+     - Concatenating with an empty string: `"Hello".concat("")` → `"Hello"`
+     - Concatenating an empty string with another string: `"".concat("World")` → `"World"`
+
+### 6. **`equals(Object anObject)`**
+   - **Description**: Compares the current string to the specified object. Returns `true` if the strings are equal, `false` otherwise.
+   - **Syntax**: `boolean equals(Object anObject)`
+   - **Example**:
+     ```java
+     String s1 = "Hello";
+     String s2 = "Hello";
+     boolean isEqual = s1.equals(s2); // true
+     ```
+   - **Test Cases**:
+     - Equal strings: `"Hello".equals("Hello")` → `true`
+     - Unequal strings: `"Hello".equals("World")` → `false`
+     - Different cases: `"Hello".equals("hello")` → `false`
+     - Comparison with null: `"Hello".equals(null)` → `false`
+
+### 7. **`equalsIgnoreCase(String anotherString)`**
+   - **Description**: Compares the current string to the specified string, ignoring case considerations.
+   - **Syntax**: `boolean equalsIgnoreCase(String anotherString)`
+   - **Example**:
+     ```java
+     String s1 = "Hello";
+     String s2 = "hello";
+     boolean isEqual = s1.equalsIgnoreCase(s2); // true
+     ```
+   - **Test Cases**:
+     - Same strings with different cases: `"Hello".equalsIgnoreCase("hello")` → `true`
+     - Completely different strings: `"Hello".equalsIgnoreCase("World")` → `false`
+     - Comparison with null: `"Hello".equalsIgnoreCase(null)` → `false`
+
+### 8. **`compareTo(String anotherString)`**
+   - **Description**: Compares two strings lexicographically. The comparison is based on the Unicode value of each character in the strings.
+   - **Syntax**: `int compareTo(String anotherString)`
+   - **Example**:
+     ```java
+     String s1 = "Hello";
+     String s2 = "World";
+     int result = s1.compareTo(s2); // Negative value
+     ```
+   - **Test Cases**:
+     - Identical strings: `"Hello".compareTo("Hello")` → `0`
+     - First string lexicographically less: `"Apple".compareTo("Banana")` → Negative value
+     - First string lexicographically greater: `"Banana".compareTo("Apple")` → Positive value
+
+### 9. **`compareToIgnoreCase(String str)`**
+   - **Description**: Compares two strings lexicographically, ignoring case differences.
+   - **Syntax**: `int compareToIgnoreCase(String str)`
+   - **Example**:
+     ```java
+     String s1 = "hello";
+     String s2 = "Hello";
+     int result = s1.compareToIgnoreCase(s2); // 0
+     ```
+   - **Test Cases**:
+     - Identical strings with different cases: `"hello".compareToIgnoreCase("Hello")` → `0`
+     - Strings that differ in characters: `"apple".compareToIgnoreCase("Banana")` → Negative value
+
+### 10. **`contains(CharSequence s)`**
+    - **Description**: Returns `true` if the string contains the specified sequence of characters.
+    - **Syntax**: `boolean contains(CharSequence s)`
+    - **Example**:
+      ```java
+      String s = "Hello World";
+      boolean containsHello = s.contains("Hello"); // true
+      ```
+    - **Test Cases**:
+      - Substring present: `"Hello World".contains("World")` → `true`
+      - Substring not present: `"Hello World".contains("world")` → `false`
+      - Empty substring: `"Hello World".contains("")` → `true`
+
+### 11. **`startsWith(String prefix)`**
+    - **Description**: Checks if the string starts with the specified prefix.
+    - **Syntax**: `boolean startsWith(String prefix)`
+    - **Example**:
+      ```java
+      String s = "Hello World";
+      boolean startsWithHello = s.startsWith("Hello"); // true
+      ```
+    - **Test Cases**:
+      - Valid prefix: `"Hello World".startsWith("Hello")` → `true`
+      - Invalid prefix: `"Hello World".startsWith("World")` → `false`
+      - Empty prefix: `"Hello World".startsWith("")` → `true`
+
+### 12. **`endsWith(String suffix)`**
+    - **Description**: Checks if the string ends with the specified suffix.
+    - **Syntax**: `boolean endsWith(String suffix)`
+    - **Example**:
+      ```java
+      String s = "Hello World";
+      boolean endsWithWorld = s.endsWith("World"); // true
+      ```
+    - **Test Cases**:
+      - Valid suffix: `"Hello World".endsWith("World")` → `true`
+      - Invalid suffix: `"Hello World".endsWith("Hello")` → `false`
+      - Empty suffix: `"Hello World".endsWith("")` → `true`
+
+### 13. **`indexOf(int ch)`**
+    - **Description**: Returns the index of the first occurrence of the specified character. If the character is not found, it returns `-1`.
+    - **Syntax**: `int indexOf(int ch)`
+    - **Example**:
+      ```java
+      String s = "Hello";
+      int index = s.indexOf('e'); // 1
+      ```
+    - **Test Cases**:
+      - Character present: `"Hello".indexOf('e')` → `1`
+      - Character not present: `"Hello".indexOf('z')` → `-1`
+      - Multiple occurrences: `"HelloHello".indexOf('l')` → `2`
+
+### 14. **`indexOf(int ch, int fromIndex)`**
+    - **Description**: Returns the index of the first occurrence of the specified character, starting the search from the specified index.
+    - **Syntax**: `int
+
+ indexOf(int ch, int fromIndex)`
+    - **Example**:
+      ```java
+      String s = "Hello";
+      int index = s.indexOf('l', 3); // 3
+      ```
+    - **Test Cases**:
+      - Character present after start index: `"Hello".indexOf('l', 3)` → `3`
+      - Character present before start index: `"Hello".indexOf('l', 4)` → `-1`
+      - Start index out of bounds: `"Hello".indexOf('l', 10)` → `-1`
+
+### 15. **`indexOf(String str)`**
+    - **Description**: Returns the index of the first occurrence of the specified substring.
+    - **Syntax**: `int indexOf(String str)`
+    - **Example**:
+      ```java
+      String s = "Hello World";
+      int index = s.indexOf("World"); // 6
+      ```
+    - **Test Cases**:
+      - Substring present: `"Hello World".indexOf("World")` → `6`
+      - Substring not present: `"Hello World".indexOf("world")` → `-1`
+      - Substring empty: `"Hello World".indexOf("")` → `0`
+
+### 16. **`indexOf(String str, int fromIndex)`**
+    - **Description**: Returns the index of the first occurrence of the specified substring, starting the search from the specified index.
+    - **Syntax**: `int indexOf(String str, int fromIndex)`
+    - **Example**:
+      ```java
+      String s = "Hello World";
+      int index = s.indexOf("World", 7); // -1
+      ```
+    - **Test Cases**:
+      - Substring present after start index: `"Hello World".indexOf("World", 5)` → `6`
+      - Substring present before start index: `"Hello World".indexOf("World", 7)` → `-1`
+      - Start index out of bounds: `"Hello World".indexOf("World", 15)` → `-1`
+
+### 17. **`lastIndexOf(int ch)`**
+    - **Description**: Returns the index of the last occurrence of the specified character. If the character is not found, it returns `-1`.
+    - **Syntax**: `int lastIndexOf(int ch)`
+    - **Example**:
+      ```java
+      String s = "Hello";
+      int index = s.lastIndexOf('l'); // 3
+      ```
+    - **Test Cases**:
+      - Character present: `"Hello".lastIndexOf('l')` → `3`
+      - Character not present: `"Hello".lastIndexOf('z')` → `-1`
+      - Multiple occurrences: `"HelloHello".lastIndexOf('l')` → `8`
+
+### 18. **`lastIndexOf(int ch, int fromIndex)`**
+    - **Description**: Returns the index of the last occurrence of the specified character, searching backward starting at the specified index.
+    - **Syntax**: `int lastIndexOf(int ch, int fromIndex)`
+    - **Example**:
+      ```java
+      String s = "Hello";
+      int index = s.lastIndexOf('l', 2); // 2
+      ```
+    - **Test Cases**:
+      - Character present before start index: `"Hello".lastIndexOf('l', 2)` → `2`
+      - Character not present before start index: `"Hello".lastIndexOf('z', 2)` → `-1`
+      - Start index out of bounds: `"Hello".lastIndexOf('l', 10)` → `3`
+
+### 19. **`lastIndexOf(String str)`**
+    - **Description**: Returns the index of the last occurrence of the specified substring.
+    - **Syntax**: `int lastIndexOf(String str)`
+    - **Example**:
+      ```java
+      String s = "Hello World Hello";
+      int index = s.lastIndexOf("Hello"); // 12
+      ```
+    - **Test Cases**:
+      - Substring present: `"Hello World Hello".lastIndexOf("Hello")` → `12`
+      - Substring not present: `"Hello World".lastIndexOf("world")` → `-1`
+      - Substring empty: `"Hello World".lastIndexOf("")` → `11`
+
+### 20. **`lastIndexOf(String str, int fromIndex)`**
+    - **Description**: Returns the index of the last occurrence of the specified substring, searching backward starting at the specified index.
+    - **Syntax**: `int lastIndexOf(String str, int fromIndex)`
+    - **Example**:
+      ```java
+      String s = "Hello World Hello";
+      int index = s.lastIndexOf("Hello", 11); // 0
+      ```
+    - **Test Cases**:
+      - Substring present before start index: `"Hello World Hello".lastIndexOf("Hello", 11)` → `0`
+      - Substring not present before start index: `"Hello World Hello".lastIndexOf("World", 4)` → `-1`
+      - Start index out of bounds: `"Hello World".lastIndexOf("World", 15)` → `6`
+
+### 21. **`toLowerCase()`**
+    - **Description**: Converts all characters in the string to lowercase using the default locale.
+    - **Syntax**: `String toLowerCase()`
+    - **Example**:
+      ```java
+      String s = "Hello World";
+      String lower = s.toLowerCase(); // "hello world"
+      ```
+    - **Test Cases**:
+      - Mixed case string: `"Hello World".toLowerCase()` → `"hello world"`
+      - All uppercase string: `"HELLO".toLowerCase()` → `"hello"`
+      - Already lowercase string: `"hello".toLowerCase()` → `"hello"`
+
+### 22. **`toUpperCase()`**
+    - **Description**: Converts all characters in the string to uppercase using the default locale.
+    - **Syntax**: `String toUpperCase()`
+    - **Example**:
+      ```java
+      String s = "Hello World";
+      String upper = s.toUpperCase(); // "HELLO WORLD"
+      ```
+    - **Test Cases**:
+      - Mixed case string: `"Hello World".toUpperCase()` → `"HELLO WORLD"`
+      - All lowercase string: `"hello".toUpperCase()` → `"HELLO"`
+      - Already uppercase string: `"HELLO".toUpperCase()` → `"HELLO"`
+
+### 23. **`trim()`**
+    - **Description**: Removes leading and trailing whitespace from the string.
+    - **Syntax**: `String trim()`
+    - **Example**:
+      ```java
+      String s = "  Hello World  ";
+      String trimmed = s.trim(); // "Hello World"
+      ```
+    - **Test Cases**:
+      - String with leading/trailing spaces: `"  Hello  ".trim()` → `"Hello"`
+      - String with no spaces: `"Hello".trim()` → `"Hello"`
+      - String with only spaces: `"   ".trim()` → `""`
+
+### 24. **`replace(char oldChar, char newChar)`**
+    - **Description**: Replaces all occurrences of the specified old character with the new character.
+    - **Syntax**: `String replace(char oldChar, char newChar)`
+    - **Example**:
+      ```java
+      String s = "Hello";
+      String replaced = s.replace('l', 'p'); // "Heppo"
+      ```
+    - **Test Cases**:
+      - Character present in string: `"Hello".replace('l', 'p')` → `"Heppo"`
+      - Character not present in string: `"Hello".replace('z', 'p')` → `"Hello"`
+      - Multiple occurrences: `"HelloHello".replace('l', 'p')` → `"HeppoHeppo"`
+
+### 25. **`replace(CharSequence target, CharSequence replacement)`**
+    - **Description**: Replaces each substring of this string that matches the literal target sequence with the specified literal replacement sequence.
+    - **Syntax**: `String replace(CharSequence target, CharSequence replacement)`
+    - **Example**:
+      ```java
+      String s = "Hello World";
+      String replaced = s.replace("World", "Java"); // "Hello Java"
+      ```
+    - **Test Cases**:
+      - Substring present: `"Hello World".replace("World", "Java")` → `"Hello Java"`
+      - Substring not present: `"Hello World".replace("world", "Java")` → `"Hello World"`
+      - Empty target: `"Hello World".replace("", "Java")` → `"JavaHJavaeJavalJavaoJavJava JavJavaoJavJavarJava JavaWJavaoJavarJava JavJavaJavarJavaJavarJavaJav"`
+
+### 26. **`replaceAll(String regex, String replacement)`**
+    - **Description**: Replaces each substring of this string that matches the given regular expression with the given replacement.
+    - **Syntax**: `String replaceAll(String regex, String replacement)`
+    - **Example**:
+      ```java
+      String s = "Hello World";
+      String replaced = s.replaceAll("l", "p"); // "Heppo Worpd"
+      ```
+    - **Test Cases**:
+      - Regex matches substring: `"Hello123World".replaceAll("\\d+", "")` → `"HelloWorld"`
+      - Regex does not match substring: `"Hello World".replaceAll("world", "Java")
+
+` → `"Hello World"`
+      - Regex with special characters: `"Hello. World!".replaceAll("\\W", "")` → `"HelloWorld"`
+
+### 27. **`replaceFirst(String regex, String replacement)`**
+    - **Description**: Replaces the first substring of this string that matches the given regular expression with the given replacement.
+    - **Syntax**: `String replaceFirst(String regex, String replacement)`
+    - **Example**:
+      ```java
+      String s = "Hello World Hello";
+      String replaced = s.replaceFirst("l", "p"); // "Heplo World Hello"
+      ```
+    - **Test Cases**:
+      - Regex matches substring: `"Hello123World".replaceFirst("\\d+", "")` → `"HelloWorld"`
+      - Regex does not match substring: `"Hello World".replaceFirst("world", "Java")` → `"Hello World"`
+      - Regex with special characters: `"Hello. World!".replaceFirst("\\W", "")` → `"Hello World"`
+
+### 28. **`split(String regex)`**
+    - **Description**: Splits this string around matches of the given regular expression.
+    - **Syntax**: `String[] split(String regex)`
+    - **Example**:
+      ```java
+      String s = "one,two,three";
+      String[] parts = s.split(","); // ["one", "two", "three"]
+      ```
+    - **Test Cases**:
+      - Split by comma: `"one,two,three".split(",")` → `["one", "two", "three"]`
+      - Split by whitespace: `"one two three".split(" ")` → `["one", "two", "three"]`
+      - Regex with special characters: `"one.two.three".split("\\.")` → `["one", "two", "three"]`
+
+### 29. **`split(String regex, int limit)`**
+    - **Description**: Splits this string around matches of the given regular expression with a limit on the number of splits.
+    - **Syntax**: `String[] split(String regex, int limit)`
+    - **Example**:
+      ```java
+      String s = "one,two,three";
+      String[] parts = s.split(",", 2); // ["one", "two,three"]
+      ```
+    - **Test Cases**:
+      - Split with limit greater than parts: `"one,two,three".split(",", 2)` → `["one", "two,three"]`
+      - Split with limit equals 0: `"one,two,three".split(",", 0)` → `["one", "two", "three"]`
+      - Split with limit less than parts: `"one,two,three".split(",", 1)` → `["one,two,three"]`
+
+### 30. **`matches(String regex)`**
+    - **Description**: Tells whether or not this string matches the given regular expression.
+    - **Syntax**: `boolean matches(String regex)`
+    - **Example**:
+      ```java
+      String s = "Hello123";
+      boolean isMatch = s.matches("\\w+\\d+"); // true
+      ```
+    - **Test Cases**:
+      - Regex match: `"Hello123".matches("\\w+\\d+")` → `true`
+      - Regex no match: `"Hello World".matches("\\w+")` → `false`
+      - Regex with special characters: `"Hello@123".matches("\\w+\\d+")` → `false`
+
+### 31. **`toCharArray()`**
+    - **Description**: Converts this string to a new character array.
+    - **Syntax**: `char[] toCharArray()`
+    - **Example**:
+      ```java
+      String s = "Hello";
+      char[] chars = s.toCharArray(); // ['H', 'e', 'l', 'l', 'o']
+      ```
+    - **Test Cases**:
+      - Non-empty string: `"Hello".toCharArray()` → `['H', 'e', 'l', 'l', 'o']`
+      - Empty string: `"".toCharArray()` → `[]`
+
+### 32. **`intern()`**
+    - **Description**: Returns a canonical representation for the string object.
+    - **Syntax**: `String intern()`
+    - **Example**:
+      ```java
+      String s1 = new String("Hello");
+      String s2 = s1.intern();
+      ```
+    - **Test Cases**:
+      - New string object: `new String("Hello").intern()` → Reference to `"Hello"` in the string pool
+      - Already interned string: `"Hello".intern()` → Same reference as `"Hello"`
+
+### 33. **`isEmpty()`**
+    - **Description**: Returns `true` if, and only if, `length()` is `0`.
+    - **Syntax**: `boolean isEmpty()`
+    - **Example**:
+      ```java
+      String s = "";
+      boolean isEmpty = s.isEmpty(); // true
+      ```
+    - **Test Cases**:
+      - Empty string: `"".isEmpty()` → `true`
+      - Non-empty string: `"Hello".isEmpty()` → `false`
+
+### 34. **`join(CharSequence delimiter, CharSequence... elements)`**
+    - **Description**: Returns a new `String` composed of copies of the `CharSequence` elements joined together with a copy of the specified delimiter.
+    - **Syntax**: `static String join(CharSequence delimiter, CharSequence... elements)`
+    - **Example**:
+      ```java
+      String joined = String.join(", ", "one", "two", "three"); // "one, two, three"
+      ```
+    - **Test Cases**:
+      - Non-empty elements: `String.join(", ", "one", "two", "three")` → `"one, two, three"`
+      - Single element: `String.join(", ", "one")` → `"one"`
+      - No elements: `String.join(", ")` → `""`
+
+### 35. **`valueOf(char[] data)`**
+    - **Description**: Returns the string representation of the `char` array argument.
+    - **Syntax**: `static String valueOf(char[] data)`
+    - **Example**:
+      ```java
+      char[] chars = {'H', 'e', 'l', 'l', 'o'};
+      String s = String.valueOf(chars); // "Hello"
+      ```
+    - **Test Cases**:
+      - Non-empty array: `String.valueOf(new char[]{'H', 'e', 'l', 'l', 'o'})` → `"Hello"`
+      - Empty array: `String.valueOf(new char[]{})` → `""`
+
+### 36. **`valueOf(char[] data, int offset, int count)`**
+    - **Description**: Returns the string representation of a specific subarray of the `char` array argument.
+    - **Syntax**: `static String valueOf(char[] data, int offset, int count)`
+    - **Example**:
+      ```java
+      char[] chars = {'H', 'e', 'l', 'l', 'o'};
+      String s = String.valueOf(chars, 1, 3); // "ell"
+      ```
+    - **Test Cases**:
+      - Valid subarray: `String.valueOf(new char[]{'H', 'e', 'l', 'l', 'o'}, 1, 3)` → `"ell"`
+      - Offset and count out of bounds: `String.valueOf(new char[]{'H', 'e', 'l', 'l', 'o'}, 4, 3)` → `StringIndexOutOfBoundsException`
+
+### 37. **`format(String format, Object... args)`**
+    - **Description**: Returns a formatted string using the specified format string and arguments.
+    - **Syntax**: `static String format(String format, Object... args)`
+    - **Example**:
+      ```java
+      String formatted = String.format("Hello %s", "World"); // "Hello World"
+      ```
+    - **Test Cases**:
+      - Valid format and arguments: `String.format("Hello %s", "World")` → `"Hello World"`
+      - Invalid format: `String.format("Hello %d", "World")` → `IllegalFormatException`
+
+### 38. **`getBytes()`**
+    - **Description**: Encodes this `String` into a sequence of bytes using the platform's default charset, storing the result into a new byte array.
+    - **Syntax**: `byte[] getBytes()`
+    - **Example**:
+      ```java
+      String s = "Hello";
+      byte[] bytes = s.getBytes(); // [72, 101, 108, 108, 111]
+      ```
+    - **Test Cases**:
+      - Non-empty string: `"Hello".getBytes()` → `[72, 101, 108, 108, 111]`
+      - Empty string: `"".getBytes()` → `[]`
+
+### 39. **`getBytes(String charsetName)`**
+    - **Description**: Encodes this `String` into a sequence of bytes using the specified charset, storing the result into a new byte array.
+    - **Syntax**: `byte[] getBytes(String charsetName) throws UnsupportedEncodingException`
+    - **Example**:
+      ```java
+      String s = "Hello";
+      byte[] bytes = s.getBytes("UTF-8"); // [72, 101, 108, 108, 111]
+      ```
+    - **Test Cases**:
+      - Valid charset: `"Hello".getBytes("UTF-8
+
+")` → `[72, 101, 108, 108, 111]`
+      - Invalid charset: `"Hello".getBytes("InvalidCharset")` → `UnsupportedEncodingException`
+
+### 40. **`contentEquals(CharSequence cs)`**
+    - **Description**: Compares this string to the specified `CharSequence`. The result is `true` if and only if this `String` represents the same sequence of char values as the specified sequence.
+    - **Syntax**: `boolean contentEquals(CharSequence cs)`
+    - **Example**:
+      ```java
+      String s = "Hello";
+      boolean equals = s.contentEquals(new StringBuilder("Hello")); // true
+      ```
+    - **Test Cases**:
+      - Same sequence: `"Hello".contentEquals(new StringBuilder("Hello"))` → `true`
+      - Different sequence: `"Hello".contentEquals(new StringBuilder("World"))` → `false`
+      - Empty sequence: `"".contentEquals(new StringBuilder(""))` → `true`

@@ -9,13 +9,13 @@ class perfect_number{
         int end = sc.nextInt();
 
         if(start > 0){
-            for(int j = start; j<= end; j++){
-                int num = j;
+            for(int i = start; i<= end; i++){
+                int num = i;
                 int res = 0;
 
-                for(int i = 1; i<=num/2; i++){
-                    if(num % i == 0){
-                        res += i;
+                for(int j = 1; j<=num/2; j++){
+                    if(num % j == 0){
+                        res += j;
                     }
                 }
                 if(num == res){

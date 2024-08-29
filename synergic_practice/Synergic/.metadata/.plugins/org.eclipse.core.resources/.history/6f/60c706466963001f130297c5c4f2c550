@@ -1,0 +1,35 @@
+package practice;
+
+import java.util.*;
+
+public class Student {
+	static Map<String,List<String>> stud_list = new HashMap<String,List<String>>();
+	
+	public static void main(String[] args) {
+		
+		Student s = new Student();
+		
+		stud_list.put("ECE", Arrays.asList("Rajnish","Raghul","Sanjay"));
+		stud_list.put("EEE", Arrays.asList("keerthi raj","ram","Sanjay"));
+		stud_list.put("CSE", Arrays.asList("Rajnish","aravind","anna"));
+		
+		System.out.println(stud_list);
+		
+		Set<String> dept = stud_list.keySet();
+		List<String> students = new ArrayList<String>();
+		
+		for(String stud : dept) {
+			students = stud_list.get(stud);
+		}
+		
+		System.out.println(students);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

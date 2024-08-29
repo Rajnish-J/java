@@ -1,0 +1,20 @@
+package level_3;
+
+import java.util.*;
+
+public class e_comm {
+	
+	public static void main(String[] args) {
+		ArrayList<String> prod = new ArrayList<String>();
+		
+		prod.add("ELEC_TV");
+		prod.add("CLOTH_Shirt");
+		prod.add("ELEC_Laptop");
+		prod.add("CLOTH_Jeans");
+		prod.add("ELEC_Smartphone");
+		prod.add("TOY_Car");
+		
+		System.out.println(prod);
+	}
+	
+}

@@ -12,4 +12,4 @@ public class leap_year {
             System.out.println("Not a leap year");
         }
     }
-}
+}   

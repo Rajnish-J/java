@@ -20,7 +20,7 @@ class First_N_Primes {
             num++;
         }
         
-        System.out.println("The first 10 prime numbers are:");
+        // System.out.println("The first 10 prime numbers are:");
         for (int val : primes) {
             System.out.print(val + " ");
         }

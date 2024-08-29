@@ -1,0 +1,18 @@
+package collections_pra;
+
+import java.util.ArrayList;
+
+public class student_arraylist {
+	
+	static ArrayList<student> student = new ArrayList();
+	
+	public static void main(String[] args) {
+		student s1 = new student(334,"Rajnish",22);
+		student s2 = new student(330, "raghul", 21);
+		
+		student.add(s1);
+		student.add(s2);
+		
+		System.out.println(student);
+	}
+}

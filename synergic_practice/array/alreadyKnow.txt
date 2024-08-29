@@ -1,0 +1,9 @@
+1) Java Program to copy all elements of one array into another array
+2) print the elements in the array
+3) print the reverse order of the array elements
+4) even position in the array
+5) odd position in the array
+6) smallest element in the array
+7) largest element in the array
+8) sort : ascending order
+9) sort : descending order

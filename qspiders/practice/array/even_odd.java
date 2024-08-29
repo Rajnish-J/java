@@ -8,6 +8,9 @@ class even_odd{
         System.out.print("Enter the size of the array: ");
         int size = sc.nextInt();
         int[] arr = new int[size];
+        for(int obj : arr){
+            arr[obj] = sc.nextInt();
+        }
         int even_count = 0, odd_count = 0;
 
         for(int i = 0; i<arr.length; i++){

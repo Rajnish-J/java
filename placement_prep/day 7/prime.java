@@ -7,7 +7,7 @@ class prime{
         int num = sc.nextInt();
         int fac_count = 2;
 
-        for(int i = 2; i<num; i++){
+        for(int i = 2; i<Math.sqrt(num); i++){
             if(num % i == 0){
                 fac_count++;
                 if(fac_count > 2){

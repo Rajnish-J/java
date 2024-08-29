@@ -5,6 +5,7 @@ class arr1_divide_arr2 {
         int size = sc.nextInt();
         int [] num_1 = new int[size];
         int [] num_2 = new int[size];
+        int [] res = new int[size];
 
         for(int i = 0; i<size; i++){
             num_1[i] = sc.nextInt();
@@ -15,8 +16,8 @@ class arr1_divide_arr2 {
         }
 
         for(int j = 0; j<size; j++){
-            int num = num_1[j] / num_2[j];
-            System.out.println(num);
+            res[j] = num_1[j] / num_2[j];
+            System.out.println(res[j]);
         }
     }
 }

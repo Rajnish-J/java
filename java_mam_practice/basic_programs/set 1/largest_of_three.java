@@ -20,25 +20,25 @@ class largest_three
             System.out.println(c + " is the greater number");
         }
 
-        //another method
+        // ! another method
 
         
-        int largest = a; // Assuming num1 is the largest initially
+        // int largest = a; // Assuming num1 is the largest initially
 
-        if (b > largest) {
-            largest = b;
-        }
+        // if (b > largest) {
+        //     largest = b;
+        // }
 
-        if (c > largest) {
-            largest = c;
-        }
+        // if (c > largest) {
+        //     largest = c;
+        // }
 
-        System.out.println("The largest number is: " + largest);
+        // System.out.println("The largest number is: " + largest);
 
-        // with ternary operator
+        // // with ternary operator
 
-        largest = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
-        System.out.println(largest);
+        // largest = (a > b) ? ((a > c) ? a : c) : ((b > c) ? b : c);
+        // System.out.println(largest);
 
     }
 }

@@ -1,0 +1,29 @@
+1. **Java Program to find the longest repeating sequence in a string**:
+   - Tests your understanding of string manipulation and dynamic programming.
+
+2. **Java Program to find all the permutations of a string**:
+   - Focuses on recursion and backtracking, important for problem-solving in combinatorial scenarios.
+
+3. **Java Program to determine whether a given string is a palindrome**:
+   - A classic problem that checks your understanding of string operations and pointers.
+
+4. **Java Program to determine whether one string is a rotation of another**:
+   - Involves string manipulation and checks for rotation properties, which is a common interview question.
+
+5. **Java Program to find the maximum and minimum occurring character in a string**:
+   - Tests your ability to use data structures like arrays or hash maps for frequency counting.
+
+6. **Java Program to find the duplicate characters in a string**:
+   - Builds your skills in identifying and handling duplicates, which is a frequent problem in string processing.
+
+7. **Java Program to find the frequency of characters**:
+   - A foundational problem for understanding counting algorithms and hash maps.
+
+8. **Java Program to find the most repeated word in a text file**:
+   - Involves file handling, string processing, and frequency counting, which are useful in practical scenarios.
+
+9. **Java Program to swap two string variables without using a third or temp variable**:
+   - Tests your understanding of in-place operations and string manipulation tricks.
+
+10. **Java Program to print the smallest and biggest possible palindrome word in a given string**:
+    - Combines palindrome checking with string manipulation, enhancing your understanding of edge cases and search techniques.

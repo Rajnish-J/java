@@ -1,6 +1,6 @@
 // logic for sorting
 
-class Largest {
+class largest {
     public static void main(String[] args) {
         
         int[] array = {1, 3, 5, 2};

@@ -1,0 +1,57 @@
+package practice;
+
+import java.util.ArrayList;
+
+public class test {
+	
+	private String name;
+	private int r_no;
+	
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getR_no() {
+		return r_no;
+	}
+
+	public void setR_no(int r_no) {
+		this.r_no = r_no;
+	}
+	
+	public test() {
+		
+	}
+	
+	public test(String name, int r_no) {
+		this.name = name;
+		this.r_no = r_no;
+	}
+	
+	public void DOtest(test t) {
+		System.out.println(t.getName());
+		System.out.println(t.getR_no());
+	}
+	
+	public static void main(String[] args) {
+		
+		ArrayList<test> al = new ArrayList<test>();
+		
+		test t1 = new test("Rajnsih",334);
+		test t2 = new test("Raghul", 330);
+		
+		al.add(t1);
+		al.add(t2);
+		
+		for(test obj : al) {
+			System.out.println(obj);
+		}
+		
+		t1.DOtest(t1);
+		
+	}
+}

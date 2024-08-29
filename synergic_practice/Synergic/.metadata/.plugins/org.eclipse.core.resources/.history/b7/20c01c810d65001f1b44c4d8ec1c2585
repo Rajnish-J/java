@@ -1,0 +1,18 @@
+package string;
+
+import java.util.*;
+
+public class occurence {
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		System.out.print("Enter the string: ");
+		String str = sc.nextLine().trim().replace(" " , "");
+		
+	}
+	
+	public static HashMap<Character, Integer> approach_1(String str){
+		Map<Character, Integer> hm = new HashMap<Character, Integer>();
+	}
+	
+}

@@ -21,8 +21,5 @@ class palindrome {
             
         }
         System.out.println(check? "palindrome" : "not a palindrome");
-
-
-
     }
 }

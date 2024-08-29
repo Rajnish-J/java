@@ -26,7 +26,7 @@ class arr{
         }
         
         // getting final result 
-        System.out.println(count_even -  count_odd);
+        System.out.print("even count: " + count_even + " - odd count: " + count_odd);
 
     }    
 }

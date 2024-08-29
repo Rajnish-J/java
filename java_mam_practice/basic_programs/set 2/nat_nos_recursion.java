@@ -4,8 +4,7 @@ class nat_no{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
-        int sum = calculate_nat(num);
-        System.out.println(sum);
+        System.out.println(calculate_nat(num));
     }
     public static int calculate_nat(int n){
         if(n == 1){

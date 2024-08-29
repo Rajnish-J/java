@@ -16,7 +16,7 @@ class l_cm {
             
         }
         lcm = (num_1 * num_2) / gcd;
-        System.out.println(gcd);
-        System.out.println(lcm);
+        System.out.println("GCD: " + gcd);
+        System.out.println("LCM: " + lcm);
     }
 }

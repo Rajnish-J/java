@@ -1,0 +1,19 @@
+package level_3;
+
+import java.util.*;
+
+public class travel_managment {
+
+	public static void main(String[] args) {
+		ArrayList<city> obj = new ArrayList<city>();
+		
+		obj.add(new city("New York", "USA", 8419000, 789.4));
+		obj.add(new city("Los Angels", "USA", 3980000, 1214.9));
+		obj.add(new city("Tokyo", "Japn", 13929000, 2191));
+		obj.add(new city("London", "UK", 8982000, 1572));
+		obj.add(new city("Paris", "France", 2148000, 105.4));
+		
+		System.out.println(obj);
+	}
+	
+}

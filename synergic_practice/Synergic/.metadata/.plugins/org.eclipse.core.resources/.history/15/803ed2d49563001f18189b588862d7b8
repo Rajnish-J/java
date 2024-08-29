@@ -1,0 +1,35 @@
+package string;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class anagram {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		// user inputs:
+		System.out.println("Enter the first String");
+		String name_1 = sc.nextLine();
+		String name_2 = sc.nextLine();
+
+		// converting the strings into lower case
+		name_1.toLowerCase();
+		name_2.toLowerCase();
+
+		// changing strings to char array:
+		char[] char_1 = name_1.toCharArray();
+		for(char obj : char_1) {
+			System.out.println(obj);
+		}								
+		char[] char_2 = name_2.toCharArray();
+		for(char obj : char_2) {
+			System.out.println(obj);
+		}
+		
+		// sorting
+		Arrays.sort(char_1);
+		Arrays.sort(char_2);
+
+		// checking for anagram
+		System.out.println(Arrays.equals(char_1, char_2) ? "Anagram" : "Not an anagram");
+	}
+}

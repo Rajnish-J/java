@@ -1,0 +1,19 @@
+package practice;
+
+import java.util.ArrayList;
+
+public class test {
+	public static void main(String[] args) {
+		
+		ArrayList<String> al = new ArrayList<String>();
+		
+		al.add("HI");
+		al.add("my name");
+		al.add("Rajnish");
+		
+		for(String obj : al) {
+			System.out.println(obj);
+		}
+		
+	}
+}
